@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+<context-param>
+  <param-name>driver</param-name>
+  <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+    </context-param>
+    <context-param>
+  <param-name>url</param-name>
+  <param-value>jdbc:oracle:thin:@localhost:1521:XE</param-value>
+    </context-param>
+  
+  <context-param>
+  <param-name>user</param-name>
+  <param-value>system</param-value>
+    </context-param>
+  <context-param>
+  <param-name>pwd</param-name>
+  <param-value>oracle09</param-value>
+  </context-param>
+ <servlet>
+  <servlet-name>apt</servlet-name>
+  <servlet-class>SetCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>apt</servlet-name>
+  <url-pattern>/Dept.com</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>hyd</servlet-name>
+  <servlet-class>Disp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>hyd</servlet-name>
+  <url-pattern>/disp.com</url-pattern>
+  </servlet-mapping>
+  
+  
+ 
+  </web-app>

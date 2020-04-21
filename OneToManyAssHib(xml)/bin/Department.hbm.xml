@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    <class name="com.ravi.entity.Department" table="Department">
+    <id name="did"/>
+    <property name="dname"/>
+    <set name="emps" cascade="all">
+    <key column="did"></key>
+    <one-to-many class="com.ravi.entity.Employee"/>
+    
+    </set>
+    
+    
+  </class>  
+    </hibernate-mapping>

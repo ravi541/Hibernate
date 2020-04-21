@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+ <hibernate-mapping>
+ <class name="com.ravi.entity.Vehicle" table="vehicle">
+ <id name="vno"/>
+ <discriminator column="TYPE" type="string"></discriminator>
+ <property name="vname"/>
+ <property name="vtype"/>
+ <subclass name="com.ravi.entity.Bike" discriminator-value="bike">
+ <property name="bno"/>
+ <property name="bwheels"/>
+ <property name="bname"/>
+ </subclass>
+ 
+ <subclass name="com.ravi.entity.Car" discriminator-value="car">
+ <property name="cno"/>
+ <property name="cwheels"/>
+ <property name="cname"/>
+ </subclass>
+ 
+ 
+ </class>
+ 
+ </hibernate-mapping>

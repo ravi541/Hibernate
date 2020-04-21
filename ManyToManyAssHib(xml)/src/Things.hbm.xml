@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="com.ravi.entity.Things" table="things">
+    <id name="tid" length="10" type="int"/>
+    <property name="tname" length="10" type="string"/>
+	<property name="tcost" length="10" type="float"></property>
+    
+    
+    </class>
+    
+    </hibernate-mapping>

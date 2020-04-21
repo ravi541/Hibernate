@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="Employee" table="emp11">
+    <id name="eno"/>
+    <property name="ename"/>
+    <property name="esal"/>
+    <property name="eaddr"/>
+    <property name="etype"/>
+    <filter name="empfilter" condition=":type= ETYPE"></filter>
+    </class>
+    <filter-def name="empfilter">
+    <filter-param name="type" type="string"/>
+    </filter-def>
+    </hibernate-mapping>

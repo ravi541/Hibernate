@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+   <class name="com.ravi.entity.Bedroom" table="bedroom">
+   <id name="bid" length="10" type="int"/>
+   <property name="bname" length="20" type="string"/>
+    
+   <set name="things" cascade="all">
+   <key column="bid"/>
+   <many-to-many column="tid" class="com.ravi.entity.Things"/>
+   </set>
+   
+   
+   
+   
+   </class>
+    
+    </hibernate-mapping>

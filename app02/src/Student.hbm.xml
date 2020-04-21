@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+  <hibernate-mapping>
+  <class name="com.ravi.pojo.Student" table="std">
+  <id name="sid" column="SID"/>
+  <property name="sname" column="SNAME"></property>
+  <property name="saddr" column="SADDR"></property>
+  
+  
+  </class>
+  </hibernate-mapping>
