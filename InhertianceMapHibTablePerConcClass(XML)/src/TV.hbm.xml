@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+   <class name="com.ravi.entity.TV" >
+   <id name="tno" />
+   <property name="tsize"/>
+   <union-subclass name="com.ravi.entity.LedTV" table="Ledtvcc">
+   <property name="tname"/>
+   <property name="tcolor"/>
+   </union-subclass>
+   
+    <union-subclass name="com.ravi.entity.PortTv" table="Porttvcc">
+   <property name="tname"/>
+   <property name="tcolor"/>
+   </union-subclass>
+   
+   </class> 
+    
+    </hibernate-mapping>
